@@ -327,7 +327,7 @@ h2 {
     position: relative;
     display: inline-block;
 }
-.indexImageRow1 span:after, .indexImageRow2 span:after, .indexImageRow3 span:after, .L-mark:after, .circle-img:after  {
+ .circle-img:after  {
     content: '';
     position: absolute;
     top: 0;
@@ -336,16 +336,15 @@ h2 {
     height: 100%;
     background: rgba(167, 178, 232, 0.37);
     opacity: 0;
-	    transition: all .3s ease-in;
+	transition: all .3s ease-in;
 }
 .circle-img:after {
     top: 0;
     bottom: 0;
     border-radius: 50%;
 }
-
-.indexImageRow1 span:hover:after, .indexImageRow2 span:hover:after, .indexImageRow3 span:hover:after, 
-.L-mark:hover:after, .circle-img:hover:after {
+ 
+.circle-img:hover:after {
     opacity: 1;
 }
 
@@ -368,6 +367,31 @@ h2 {
   width: 50%;
   height: 400px;
   text-align: center;
+}
+.indexImageRow1 span a, .indexImageRow2 span a, .indexImageRow3 span a {
+    display: block;
+	height: 100%;
+}
+.indexImageRow1 span a:hover .text_hover, .indexImageRow2 span a:hover .text_hover, 
+.indexImageRow3 span a:hover .text_hover{
+    opacity: 1;
+    z-index: 1;
+}
+.text_hover {	
+	transition: all .3s ease-in;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 0%;
+    text-align: center;
+	opacity:0;
+	height: 100%;
+    width: 100%;
+    background: rgba(167, 178, 232, 0.37);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	
 }
 
 
@@ -396,8 +420,9 @@ h2 {
 
 }
 
-.cultureImageRow1 img {
+.cultureImageRow1 span {
   width: 50%;
+   position: relative;
   height: 400px;
   text-align: center;
 }
@@ -411,9 +436,10 @@ h2 {
 
 }
 
-.cultureImageRow2 img {
+.cultureImageRow2 span {
   width: 50%;
   height: 400px;
+   position: relative;
   text-align: center;
 }
 
@@ -426,13 +452,52 @@ h2 {
 
 }
 
-.cultureImageRow3 img {
+.cultureImageRow3 span {
   width: 50%;
   height: 400px;
+   position: relative;
   text-align: center;
 }
-
-
+.cultureImageRow1 span img, .cultureImageRow2 span img, .cultureImageRow3 span img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cultureImageRow1 span a, .cultureImageRow2 span a, .cultureImageRow3 span a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.cultureImageRow1 span img, .cultureImageRow2 span img, .cultureImageRow3 span img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cultureImageRow1 span a, .cultureImageRow2 span a, .cultureImageRow3 span a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.culture-text {
+    transition: all .3s ease-in;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 0%;
+    text-align: center;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(167, 178, 232, 0.37);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cultureImageRow1 span a:hover .culture-text, .cultureImageRow2 span a:hover .culture-text, .cultureImageRow3 span a:hover .culture-text{
+	opacity: 1;
+    z-index: 1;
+	
+}
 /*----------------CONTACT.HTML---------------------*/
 
 #formMessage {
@@ -922,6 +987,20 @@ form label {
 	height: 60px;
 
 }
+.wildlifeRow1 a{
+	font-size: 20px;
+    border-radius: 40px;
+    padding: 17px 72px;
+    background: #ffffff;
+    color: #000000;
+    border: 2px solid #000;
+    text-decoration: none;
+	display: inline-block;
+}
+.wildlifeRow1 a:hover {
+  background: #000000;
+  color: #ffffff;
+}
 
 .wildlifeRow1 button:hover {
 	background: #000000;
@@ -993,7 +1072,20 @@ form label {
 	height: 60px;
 
 }
-
+.wildlifeRow2 a{
+	font-size: 20px;
+    border-radius: 40px;
+    padding: 17px 72px;
+    background: #ffffff;
+    color: #000000;
+    border: 2px solid #000;
+    text-decoration: none;
+	display: inline-block;
+}
+.wildlifeRow2 a:hover {
+  background: #000000;
+  color: #ffffff;
+}
 
 .wildlifeRow2 button:hover {
 	background: #000000;
@@ -1068,7 +1160,20 @@ form label {
 
 }
 
-
+.wildlifeRow3 a{
+	font-size: 20px;
+    border-radius: 40px;
+    padding: 17px 72px;
+    background: #ffffff;
+    color: #000000;
+    border: 2px solid #000;
+    text-decoration: none;
+	display: inline-block;
+}
+.wildlifeRow3 a:hover {
+  background: #000000;
+  color: #ffffff;
+}
 .wildlifeRow3 button:hover {
 	background: #000000;
 	color: #ffffff;
@@ -1495,7 +1600,9 @@ form label {
 	justify-content: center;
 	padding-top: 3%;
 }
-
+  .cultureImageRow2 span, .cultureImageRow3 span, .cultureImageRow1 span, .cultureImageRow2 span {
+    width: 100%;
+}
 }
 @media(max-width:575px){
 	
